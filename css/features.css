@@ -1,0 +1,129 @@
+/* Features Section Base */
+.features-section {
+    background: linear-gradient(180deg, #FFFFFF 0%, #A3C9FF 40%, #A3A3FF 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+/* Features Grid Layout */
+.features-grid {
+    max-width: 1400px;
+    margin: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    width: 100%;
+}
+
+/* Feature Card Styles */
+.feature-card {
+    perspective: 1000px;
+    height: 350px;
+    width: auto;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.feature-card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Card Front and Back Common Styles */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background: rgba(255, 255, 255, .6);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 0px 30px rgba(255, 255, 255, 1);
+    backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+/* Card Hover Effects */
+.feature-card:hover .card-front,
+.feature-card:hover .card-back {
+    box-shadow: 0 0px 10px rgba(0, 191, 255, 0.8);
+}
+
+/* Card Back Specific Styles */
+.card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.back-content {
+    text-align: center;
+}
+
+    .back-content h3 {
+        color: #2d3748;
+    }
+
+    .back-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .back-content li {
+        color: #718096;
+        margin: 15px 0;
+        font-size: 16px;
+        transition: color 0.3s ease;
+    }
+
+        .back-content li:hover {
+            color: #4299e1;
+        }
+
+/* Feature Icon Styles */
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    transition: transform 0.2s ease;
+}
+
+.hoverable-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.8s ease;
+}
+
+.feature-card:hover .hoverable-icon {
+    transform: translatey(-80px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        height: 350px;
+    }
+}

@@ -1,0 +1,96 @@
+
+.cross-platform-section {
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(0deg, #FFFFFF 0%, #A3C9FF 40%, #A3A3FF 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#platform-heading {
+    font-family: 'Zen Dots';
+    font-size: 5rem;
+    color: white;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+#platform-tagline {
+    font-family: 'Zen Dots';
+    font-size: 3rem;
+    color: #4a5568;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.devices-showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    perspective: 1000px;
+}
+
+.device {
+    position: relative;
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+    .device img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .device:hover img {
+        transform: scale(1.05);
+    }
+
+.mobile {
+    width: 200px;
+    z-index: 3;
+}
+
+.tablet {
+    width: 300px;
+    z-index: 2;
+}
+
+.desktop {
+    width: 500px;
+    z-index: 1;
+}
+
+@media (max-width: 1024px) {
+    .devices-showcase {
+        flex-direction: column;
+    }
+
+    .device {
+        width: 80% !important;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    #platform-heading {
+        font-size: 36px;
+    }
+
+    #platform-tagline {
+        font-size: 18px;
+    }
+
+    .devices-showcase {
+        gap: 20px;
+    }
+}
+

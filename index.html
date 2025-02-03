@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munafah - Business Management Solution</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Zen+Dots&display=swap" rel="stylesheet">
+
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/features.css">
+    <link rel="stylesheet" href="css/platform.css">
+</head>
+<body>
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.59/build/spline-viewer.js"></script>
+    <!-- Hero Section HTML -->
+    <section id="hero" class="hero-section">
+        <div class="grid-overlay">
+            <!-- Grid cells will be added by JavaScript -->
+        </div>
+
+        <div class="background-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+        </div>
+
+        <div class="hero-content">
+            <img id="hero-title" class="hero-image" src="images/munafahlogocutout.png" alt="MUNAFAH Logo" />
+            <p id="hero-tagline">Streamline your business operations with our all-in-one management solution</p>
+
+            <div id="app-preview" class="app-preview">
+                <div class="spline-container">
+                    <spline-viewer url="https://prod.spline.design/4wxp9i96DgLqWHmX/scene.splinecode"></spline-viewer>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <!-- Features Section -->
+
+            <div class="features-grid">
+                <!-- Sales Management -->
+                <div class="feature-card" id="sales-feature">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-content">
+                                <div class="feature-icon">
+                                    <img src="images/sales.png" alt="Sales Management" class="hoverable-icon">
+                                </div>
+                                <h3>Sales Management</h3>
+                                <p>Streamline your sales process with integrated order management, invoicing, and customer tracking.</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-content">
+                                <h3>Sales Management</h3>
+                                <ul>
+                                    <li>Easiest Order Processing</li>
+                                    <li>Track Orders E2E</li>
+                                    <li>Smart Invoicing</li>
+                                    <li>Sales Analytics</li>
+                                    <li>Payment Integration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Inventory Control -->
+                <div class="feature-card" id="inventory-feature">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-content">
+                                <div class="feature-icon">
+                                    <img src="images/inventory.png" alt="Inventory Control" class="hoverable-icon">
+                                </div>
+                                <h3>Inventory Control</h3>
+                                <p>Real-time stock tracking, automated reordering, and warehouse management all in one place.</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-content">
+                                <h3>Inventory Control</h3>
+                                <ul>
+                                    <li>Real-time Stock Tracking</li>
+                                    <li>Automated Reordering</li>
+                                    <li>Warehouse Management</li>
+                                    <li>Inventory Analytics</li>
+                                    <li>Barcode Integration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Customer Management -->
+                <div class="feature-card" id="customer-feature">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="card-content">
+                                <div class="feature-icon">
+                                    <img src="images/customer.png" alt="Customer Management" class="hoverable-icon">
+                                </div>
+                                <h3>Customer Management</h3>
+                                <p>Build lasting relationships with comprehensive customer profiles and communication history.</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="back-content">
+                                <h3>Customer Management</h3>
+                                <ul>
+                                    <li>Customer Profiles</li>
+                                    <li>Communication History</li>
+                                    <li>Customer Support</li>
+                                    <li>Feedback Management</li>
+                                    <li>Loyalty Programs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <!-- Platform Section -->
+    <section class="cross-platform-section" id="platforms">
+        <h2 id="platform-heading">ANY DEVICE</h2>
+        <p id="platform-tagline">Exact same flow on any device you pick.</p>
+
+        <div class="devices-showcase">
+            <div class="device mobile" id="mobile-device">
+                <img src="images/mobile-app.png" alt="Mobile App">
+            </div>
+            <div class="device tablet" id="tablet-device">
+                <img src="images/tablet-app.png" alt="Tablet App">
+            </div>
+            <div class="device desktop" id="desktop-device">
+                <img src="images/desktop-app.png" alt="Desktop App">
+            </div>
+        </div>
+    </section>
+
+    <!-- Our JavaScript -->
+    <script src="js/grid-setup.js"></script>
+    <script src="js/landing-animations.js"></script>
+    <script src="js/fullpage-scroll.js"></script>
+</body>
+</html>
