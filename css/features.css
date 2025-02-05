@@ -16,35 +16,10 @@
     z-index: 1;
 }
 
-
-/* Video Container Styles */
-.background-video-container {
-    position: fixed; /* Changed from absolute to fixed */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 1;
-}
-
-/* Gradient Overlay - This will sit on top of the video */
-.gradient-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-/*    background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(163,201,255,0.85) 40%, rgba(163,163,255,0.85) 100%);*/
-    z-index: 2;
-/*    backdrop-filter: blur(5px);*/
-}
-
-
 /* Content Container - Make sure it's above the video */
 .features-content {
     position: relative;
     z-index: 3;
-    padding: 40px 20px;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -53,21 +28,23 @@
 
 /* Features Grid Layout */
 .features-grid {
-    max-width: 1400px;
     margin: 0 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 100px;
+    gap: 30px;
     width: 100%;
 }
 
 /* Feature Card Styles */
 .feature-card {
-    perspective: 1000px;
-    height: 350px;
-    width: auto;
+    height: 60vh;
+    width: 100%;
     position: relative;
     z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .card-inner {
@@ -77,6 +54,10 @@
     transition: transform 1.5s;
     transform-style: preserve-3d;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .feature-card:hover .card-inner {
@@ -89,18 +70,24 @@
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    background: rgba(255, 255, 255, .6);
+    background: rgba(255, 255, 255, .2);
     border-radius: 20px;
-    padding: 30px;
-    box-shadow: 0 0px 30px rgba(255, 255, 255, 1);
-    backdrop-filter: blur(30px);
-    border: 1px solid rgba(255, 255, 255, 1);
+    padding: 20px;
+    box-shadow: 0 0px 20px rgba(255, 255, 255, 1);
+    backdrop-filter: blur(5px);
+    border: 3px solid rgba(255, 255, 255, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /* Card Hover Effects */
 .feature-card:hover .card-front,
 .feature-card:hover .card-back {
-    box-shadow: 0 0px 10px rgba(0, 191, 255, 0.8);
+    border: 2px solid rgba(0, 191, 255, 1);
+    box-shadow: 0 0px 30px rgba(0, 191, 255, 1);
 }
 
 /* Card Back Specific Styles */
@@ -117,6 +104,8 @@
 
     .back-content h3 {
         color: #2d3748;
+        font-size: 2.5vw; /* Responsive font size */
+        margin: 0;
     }
 
     .back-content ul {
@@ -128,7 +117,7 @@
     .back-content li {
         color: #718096;
         margin: 15px 0;
-        font-size: 16px;
+        font-size: 1.5vw; /* Responsive font size */
         transition: color 0.3s ease;
     }
 
@@ -155,12 +144,45 @@
     transform: translatey(-80px);
 }
 
+
+/* Responsive Font Sizes */
+.features-grid .feature-card h1, .features-grid .feature-card h3 {
+    font-size: 3vw; /* Responsive font size */
+    margin: 15px;
+    font-family: 'Zen Dots';
+}
+
+.features-grid .feature-card p {
+    font-size: 1vw; /* Responsive font size */
+    margin: 15px;
+    font-family: 'Zen Dots';
+    color: #718096;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
         padding: 0 20px;
     }
+
+        .features-grid .feature-card h1, .features-grid .feature-card h3 {
+            font-size: 4vw; /* Responsive font size */
+            margin: 0;
+            font-family: 'Zen Dots';
+        }
+
+        .features-grid .feature-card p {
+            font-size: 2vw; /* Responsive font size */
+            margin: 0;
+            font-family: 'Zen Dots';
+            color: darkslategrey;
+        }
+
+    .back-content li {
+        font-size: 2vw; /* Responsive font size */
+    }
+
 }
 
 @media (max-width: 640px) {
@@ -169,6 +191,26 @@
     }
 
     .feature-card {
-        height: 350px;
+        height: 450px;
+    }
+
+    .features-grid .feature-card h1, .features-grid .feature-card h3 {
+        font-size: 6vw; /* Responsive font size */
+        margin: 0;
+        font-family: 'Zen Dots';
+    }
+
+    .features-grid .feature-card p {
+        font-size: 3vw; /* Responsive font size */
+        margin: 0;
+        font-family: 'Zen Dots';
+        color: darkslategrey;
+    }
+
+
+    .back-content li {
+        font-size: 4vw; /* Responsive font size */
     }
 }
+
+

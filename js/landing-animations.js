@@ -46,7 +46,7 @@ function initHeroAnimations() {
             start: "top bottom", // Start when features section hits bottom of viewport
             end: "top top", // End when features section reaches top of viewport
             scrub: 1, // Smooth scrubbing
-            markers: true // Remove this in production, helpful for debugging
+        //    markers: true // Remove this in production, helpful for debugging
         },
         y: "0", // This ensures video stays in view
         scale: 1, // Optional: slight scale effect

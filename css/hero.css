@@ -86,7 +86,6 @@
     position: relative;
     z-index: 4;
     text-align: center;
-    padding: 20px;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -97,12 +96,10 @@
 
 #hero-title {
     font-family: 'Zen Dots';
-    font-size: clamp(2rem, 14vw, 20rem);
+    font-size: clamp(2rem, 13vw, 20rem);
     letter-spacing: 0em;
     width: 100%;
-    padding: 20px;
     text-align: center;
-    line-height: 1.1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -127,7 +124,8 @@
     margin-bottom: 1rem;
     line-height: 1.5;
     opacity: 0;
-    max-width: 800px;
+
+
 }
 
 /* Scroll Indicator */
