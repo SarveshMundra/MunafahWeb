@@ -127,8 +127,8 @@
 
 /* Feature Icon Styles */
 .feature-icon {
-    width: 80px;
-    height: 80px;
+    width: 160px;
+    height: 160px;
     margin: 0 auto 20px;
     transition: transform 0.2s ease;
 }
@@ -141,7 +141,7 @@
 }
 
 .feature-card:hover .hoverable-icon {
-    transform: translatey(-80px);
+    transform: translatey(-150px);
 }
 
 
