@@ -1,11 +1,54 @@
 /* Features Section Base */
 .features-section {
-    background: linear-gradient(180deg, #FFFFFF 0%, #A3C9FF 40%, #A3A3FF 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+/* Background Container */
+.features-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+
+/* Video Container Styles */
+.background-video-container {
+    position: fixed; /* Changed from absolute to fixed */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+/* Gradient Overlay - This will sit on top of the video */
+.gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+/*    background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(163,201,255,0.85) 40%, rgba(163,163,255,0.85) 100%);*/
+    z-index: 2;
+/*    backdrop-filter: blur(5px);*/
+}
+
+
+/* Content Container - Make sure it's above the video */
+.features-content {
+    position: relative;
+    z-index: 3;
+    padding: 40px 20px;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 20px;
 }
 
 /* Features Grid Layout */
@@ -23,6 +66,8 @@
     perspective: 1000px;
     height: 350px;
     width: auto;
+    position: relative;
+    z-index: 4;
 }
 
 .card-inner {

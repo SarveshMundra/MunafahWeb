@@ -11,39 +11,50 @@ document.addEventListener('mousemove', (e) => {
     mouseY = e.clientY;
 });
 
+
+
 // Hero Section Animations
 function initHeroAnimations() {
-    // Create timeline for coordinated animation sequence
+    // Create timeline for letters animation
     const timeline = gsap.timeline({
         defaults: { ease: "power3.out" }
     });
 
-    // Initial animations
-    timeline
-        .to("#hero-title", {
-            y: 50,
+    // Animate each letter
+    const letters = document.querySelectorAll('#hero-title .letter');
+    letters.forEach((letter, index) => {
+        timeline.to(letter, {
             opacity: 1,
-            scale: 1.7,
-            duration: 2,
-            from: { scale: 0.2 }
-        })
-        .to("#hero-title", {
-            scale: 1,
-            duration: 1
-        })
-        .to("#hero-tagline", {
-            y: 50,
-            opacity: 1,
-            duration: 1.5
-        }, "-=0.20");
+            x: 0,
+            y: 0,
+            duration: 0.5,
+            delay: index * 0.1 // Delay each letter for typing effect
+        }, index * 0.1); // Start each animation after delay
+    });
+
+    // Animate tagline after letters
+    timeline.to("#hero-tagline", {
+        y: 50,
+        opacity: 1,
+        duration: 1.5
+    });
+
+    // Video scroll animation
+    gsap.to(".background-video-container", {
+        scrollTrigger: {
+            trigger: ".features-section",
+            start: "top bottom", // Start when features section hits bottom of viewport
+            end: "top top", // End when features section reaches top of viewport
+            scrub: 1, // Smooth scrubbing
+            markers: true // Remove this in production, helpful for debugging
+        },
+        y: "0", // This ensures video stays in view
+        scale: 1, // Optional: slight scale effect
+        opacity: 1 // Optional: slight fade effect
+    });
 
     // Orb animations
     const orb1 = document.querySelector('.orb-1');
-
-    // Clear any existing animations
-    gsap.killTweensOf('.orb-1');
-
-    // Add smooth cursor following
     gsap.to(orb1, {
         duration: 0.2,
         repeat: -1,
@@ -52,8 +63,6 @@ function initHeroAnimations() {
             const orbRect = orb1.getBoundingClientRect();
             const maxX = window.innerWidth - orbRect.width;
             const maxY = window.innerHeight - orbRect.height;
-
-            // Calculate target position with dampening
             const targetX = mouseX - (orbRect.width / 2);
             const targetY = mouseY - (orbRect.height / 2);
 

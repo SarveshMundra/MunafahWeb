@@ -23,26 +23,40 @@
 <body>
 
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.59/build/spline-viewer.js"></script>
-    <!-- Hero Section HTML -->
+
+
+    <!-- Hero Section -->
     <section id="hero" class="hero-section">
-        <div class="grid-overlay">
-            <!-- Grid cells will be added by JavaScript -->
+        <!-- Base Layer: Video -->
+        <div class="background-video-container">
+            <video class="background-video" autoplay loop muted>
+                <source src="media/herovideo.mp4" type="video/mp4">
+            </video>
         </div>
 
+        <!-- Second Layer: Orbs -->
         <div class="background-orbs">
             <div class="orb orb-1"></div>
             <div class="orb orb-2"></div>
         </div>
 
-        <div class="hero-content">
-            <img id="hero-title" class="hero-image" src="images/munafahlogocutout.png" alt="MUNAFAH Logo" />
-            <p id="hero-tagline">Streamline your business operations with our all-in-one management solution</p>
+        <!-- Third Layer: Grid -->
+        <div class="grid-overlay">
+            <!-- Grid cells will be added by JavaScript -->
+        </div>
 
-            <div id="app-preview" class="app-preview">
-                <div class="spline-container">
-                    <spline-viewer url="https://prod.spline.design/4wxp9i96DgLqWHmX/scene.splinecode"></spline-viewer>
-                </div>
-            </div>
+        <!-- Top Layer: Content -->
+        <div class="hero-content">
+            <h1 id="hero-title">
+                <span class="letter">M</span>
+                <span class="letter">U</span>
+                <span class="letter">N</span>
+                <span class="letter">A</span>
+                <span class="letter">F</span>
+                <span class="letter">A</span>
+                <span class="letter">H</span>
+            </h1>
+            <p id="hero-tagline">Streamline your business operations with our all-in-one management solution.</p>
         </div>
 
         <div class="scroll-indicator">
@@ -52,10 +66,16 @@
 
     <!-- Features Section -->
     <section id="features" class="features-section">
-        <!-- Features Section -->
+        <!-- Background Elements Container -->
+        <div class="features-background">
+            <!-- Gradient Overlay -->
+            <div class="gradient-overlay"></div>
+        </div>
 
+        <!-- Content Container -->
+        <div class="features-content">
             <div class="features-grid">
-                <!-- Sales Management -->
+                <!-- Sales Management Card -->
                 <div class="feature-card" id="sales-feature">
                     <div class="card-inner">
                         <div class="card-front">
@@ -82,7 +102,7 @@
                     </div>
                 </div>
 
-                <!-- Inventory Control -->
+                <!-- Inventory Control Card -->
                 <div class="feature-card" id="inventory-feature">
                     <div class="card-inner">
                         <div class="card-front">
@@ -109,7 +129,7 @@
                     </div>
                 </div>
 
-                <!-- Customer Management -->
+                <!-- Customer Management Card -->
                 <div class="feature-card" id="customer-feature">
                     <div class="card-inner">
                         <div class="card-front">
@@ -136,7 +156,7 @@
                     </div>
                 </div>
             </div>
-
+        </div>
     </section>
 
     <!-- Platform Section -->

@@ -3,24 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\sarve\\source\\repos\\MunafahWeb\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C9ABC4B-0E6F-4326-ABFE-2DECCE5CF309}|C:\\Users\\sarve\\source\\repos\\MunafahWeb|c:\\users\\sarve\\source\\repos\\munafahweb\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9C9ABC4B-0E6F-4326-ABFE-2DECCE5CF309}|C:\\Users\\sarve\\source\\repos\\MunafahWeb|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9C9ABC4B-0E6F-4326-ABFE-2DECCE5CF309}|C:\\Users\\sarve\\source\\repos\\MunafahWeb|C:\\Users\\sarve\\source\\repos\\MunafahWeb\\css\\platform.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{9C9ABC4B-0E6F-4326-ABFE-2DECCE5CF309}|C:\\Users\\sarve\\source\\repos\\MunafahWeb|solutionrelative:css\\platform.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{9C9ABC4B-0E6F-4326-ABFE-2DECCE5CF309}|C:\\Users\\sarve\\source\\repos\\MunafahWeb|c:\\users\\sarve\\source\\repos\\munafahweb\\js\\landing-animations.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{9C9ABC4B-0E6F-4326-ABFE-2DECCE5CF309}|C:\\Users\\sarve\\source\\repos\\MunafahWeb|solutionrelative:js\\landing-animations.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9C9ABC4B-0E6F-4326-ABFE-2DECCE5CF309}|C:\\Users\\sarve\\source\\repos\\MunafahWeb|C:\\Users\\sarve\\source\\repos\\MunafahWeb\\css\\hero.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{9C9ABC4B-0E6F-4326-ABFE-2DECCE5CF309}|C:\\Users\\sarve\\source\\repos\\MunafahWeb|solutionrelative:css\\hero.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C9ABC4B-0E6F-4326-ABFE-2DECCE5CF309}|C:\\Users\\sarve\\source\\repos\\MunafahWeb|C:\\Users\\sarve\\source\\repos\\MunafahWeb\\css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{9C9ABC4B-0E6F-4326-ABFE-2DECCE5CF309}|C:\\Users\\sarve\\source\\repos\\MunafahWeb|solutionrelative:css\\app.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{9C9ABC4B-0E6F-4326-ABFE-2DECCE5CF309}|C:\\Users\\sarve\\source\\repos\\MunafahWeb|C:\\Users\\sarve\\source\\repos\\MunafahWeb\\css\\features.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{9C9ABC4B-0E6F-4326-ABFE-2DECCE5CF309}|C:\\Users\\sarve\\source\\repos\\MunafahWeb|solutionrelative:css\\features.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C9ABC4B-0E6F-4326-ABFE-2DECCE5CF309}|C:\\Users\\sarve\\source\\repos\\MunafahWeb|C:\\Users\\sarve\\source\\repos\\MunafahWeb\\js\\landing-animations.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{9C9ABC4B-0E6F-4326-ABFE-2DECCE5CF309}|C:\\Users\\sarve\\source\\repos\\MunafahWeb|solutionrelative:js\\landing-animations.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{9C9ABC4B-0E6F-4326-ABFE-2DECCE5CF309}|C:\\Users\\sarve\\source\\repos\\MunafahWeb|C:\\Users\\sarve\\source\\repos\\MunafahWeb\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C9ABC4B-0E6F-4326-ABFE-2DECCE5CF309}|C:\\Users\\sarve\\source\\repos\\MunafahWeb|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,17 +26,17 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\sarve\\source\\repos\\MunafahWeb\\index.html",
               "RelativeDocumentMoniker": "index.html",
               "ToolTip": "C:\\Users\\sarve\\source\\repos\\MunafahWeb\\index.html",
               "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAAAIEAAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAqwB8AAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-02-02T21:17:01.74Z",
               "IsPinned": true,
@@ -49,50 +45,42 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "platform.css",
-              "DocumentMoniker": "C:\\Users\\sarve\\source\\repos\\MunafahWeb\\css\\platform.css",
-              "RelativeDocumentMoniker": "css\\platform.css",
-              "ToolTip": "C:\\Users\\sarve\\source\\repos\\MunafahWeb\\css\\platform.css",
-              "RelativeToolTip": "css\\platform.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-03T02:47:02.34Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "landing-animations.js",
-              "DocumentMoniker": "C:\\Users\\sarve\\source\\repos\\MunafahWeb\\js\\landing-animations.js",
-              "RelativeDocumentMoniker": "js\\landing-animations.js",
-              "ToolTip": "C:\\Users\\sarve\\source\\repos\\MunafahWeb\\js\\landing-animations.js",
-              "RelativeToolTip": "js\\landing-animations.js",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAQwFMAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-02-02T21:43:44.977Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "hero.css",
               "DocumentMoniker": "C:\\Users\\sarve\\source\\repos\\MunafahWeb\\css\\hero.css",
               "RelativeDocumentMoniker": "css\\hero.css",
               "ToolTip": "C:\\Users\\sarve\\source\\repos\\MunafahWeb\\css\\hero.css",
               "RelativeToolTip": "css\\hero.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAAAH0AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-02T21:35:27.671Z"
+              "WhenOpened": "2025-02-02T21:35:27.671Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "app.css",
-              "DocumentMoniker": "C:\\Users\\sarve\\source\\repos\\MunafahWeb\\css\\app.css",
-              "RelativeDocumentMoniker": "css\\app.css",
-              "ToolTip": "C:\\Users\\sarve\\source\\repos\\MunafahWeb\\css\\app.css",
-              "RelativeToolTip": "css\\app.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "features.css",
+              "DocumentMoniker": "C:\\Users\\sarve\\source\\repos\\MunafahWeb\\css\\features.css",
+              "RelativeDocumentMoniker": "css\\features.css",
+              "ToolTip": "C:\\Users\\sarve\\source\\repos\\MunafahWeb\\css\\features.css",
+              "RelativeToolTip": "css\\features.css",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACUAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-02-02T21:21:57.372Z"
+              "WhenOpened": "2025-02-05T11:16:23.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "landing-animations.js",
+              "DocumentMoniker": "C:\\Users\\sarve\\source\\repos\\MunafahWeb\\js\\landing-animations.js",
+              "RelativeDocumentMoniker": "js\\landing-animations.js",
+              "ToolTip": "C:\\Users\\sarve\\source\\repos\\MunafahWeb\\js\\landing-animations.js*",
+              "RelativeToolTip": "js\\landing-animations.js*",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-02-02T21:43:44.977Z",
+              "EditorCaption": ""
             }
           ]
         }
