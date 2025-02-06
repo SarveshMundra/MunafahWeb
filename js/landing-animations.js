@@ -149,7 +149,7 @@ function initFeaturesAnimations() {
     });
 
     // 4. Add final state for clean transition to next section
-    featuresTl.to({}, { duration: 0.1 }); // Small buffer at the end
+    featuresTl.to({}, { duration: 0.2 }); // Small buffer at the end
 }
 
 
