@@ -48,9 +48,10 @@
     transform: translate(-50%, -50%);
     visibility: visible;
     will-change: transform, opacity;
-/*    background: rgba(255, 255, 255, .2);
-    backdrop-filter: blur(50);
-    border-radius: 20px;*/
+    height: 50vh;
+    background: rgba(255, 255, 255, .6);
+    backdrop-filter: blur(10);
+    border-radius: 20px;
 }
 
 .card-inner {
