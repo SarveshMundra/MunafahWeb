@@ -99,57 +99,70 @@ function initHeroAnimations() {
 
 
 
-// Feature Animations
+
 function initFeaturesAnimations() {
-    // 1. First, immediately set initial states to prevent flash
     const cards = gsap.utils.toArray('.feature-card');
+
+    // Initial state
     gsap.set(cards, {
-        xPercent: 100,  // Start from right edge
-        opacity: 0      // Start invisible
+        xPercent: 100,
+        opacity: 0
     });
 
-    // Make cards visible now that GSAP has set their initial state
     cards.forEach(card => {
         card.classList.add('gsap-initialized');
+
+        // Create repeating flip animation
+        gsap.to(card.querySelector('.card-inner'), {
+            rotationY: "+=180",
+            duration: 0.8,
+            ease: "power1.inOut",
+            repeat: -1,
+            repeatDelay: 1.8,
+            yoyo: true
+        });
     });
 
-    // 2. Create the animation timeline
+    // Main scroll timeline
     const featuresTl = gsap.timeline({
         scrollTrigger: {
             trigger: '.features-section',
-            start: 'top top', // Start when features section hits the top
-            end: '+=200%',    // Reduced from 300% to tighten the animation
-            pin: true,        // Pin the section while animating
-            scrub: 1,         // Smooth scrubbing
-            anticipatePin: 1,  // Helps prevent gap at start
-            onEnter: () => console.log('Features section entered'),
-            onLeave: () => console.log('Features section left'),
+            start: 'top top',
+            end: '+=300%',
+            pin: true,
+            scrub: 1,
+            anticipatePin: 1
         }
     });
 
-    // 3. Add animations for each card with proper timing
-    cards.forEach((card, i) => {
-        // Show card coming from right
-        featuresTl.to(card, {
-            xPercent: 0,
-            opacity: 1,
-            duration: 0.33,  // Each card takes 1/3 of the scroll
-            ease: "power1.inOut"
-        });
+    const centerPauseDuration = 0.5;
 
-        // If not the last card, move it out to the left
+    cards.forEach((card, i) => {
+        // Entry animation
+        featuresTl
+            .to(card, {
+                xPercent: 0,
+                opacity: 1,
+                duration: 0.3,
+                ease: "power2.inOut"
+            })
+            // Center pause
+            .to(card, {
+                duration: centerPauseDuration
+            });
+
+        // Exit animation for non-last cards
         if (i < cards.length - 1) {
             featuresTl.to(card, {
                 xPercent: -100,
                 opacity: 0,
-                duration: 0.33,
-                ease: "power1.inOut"
-            }, ">");  // Start immediately after previous animation
+                duration: 0.3,
+                ease: "power2.inOut"
+            });
         }
     });
 
-    // 4. Add final state for clean transition to next section
-    featuresTl.to({}, { duration: 0.2 }); // Small buffer at the end
+    featuresTl.to({}, { duration: 0.2 });
 }
 
 
