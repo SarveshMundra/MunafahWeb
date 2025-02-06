@@ -1,6 +1,17 @@
 ﻿// Register GSAP ScrollTrigger Plugin
 gsap.registerPlugin(ScrollTrigger);
 
+const styleElement = document.createElement('style');
+styleElement.textContent = `
+    .feature-card {
+        visibility: hidden;
+    }
+    .feature-card.gsap-initialized {
+        visibility: visible;
+    }
+`;
+document.head.appendChild(styleElement);
+
 // Mouse tracking variables
 let mouseX = 0;
 let mouseY = 0;
@@ -10,8 +21,6 @@ document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
 });
-
-
 
 // Hero Section Animations
 function initHeroAnimations() {
@@ -46,7 +55,7 @@ function initHeroAnimations() {
             start: "top bottom", // Start when features section hits bottom of viewport
             end: "top top", // End when features section reaches top of viewport
             scrub: 1, // Smooth scrubbing
-        //    markers: true // Remove this in production, helpful for debugging
+            //    markers: true // Remove this in production, helpful for debugging
         },
         y: "0", // This ensures video stays in view
         scale: 1, // Optional: slight scale effect
@@ -88,25 +97,62 @@ function initHeroAnimations() {
     });
 }
 
-//Feature Animations
-function initFeaturesAnimations() {
-    const featureCards = gsap.utils.toArray('.feature-card');
 
-    featureCards.forEach((card, index) => {
-        gsap.from(card, {
-            scrollTrigger: {
-                trigger: card,
-                toggleActions: "play reverse play reverse"
-            },
-            y: 0,
-            opacity: 0,
-            duration: 1,
-            delay: index * .5,
-            ease: "power3.out",
-            scale: 0
-        });
+
+// Feature Animations
+function initFeaturesAnimations() {
+    // 1. First, immediately set initial states to prevent flash
+    const cards = gsap.utils.toArray('.feature-card');
+    gsap.set(cards, {
+        xPercent: 100,  // Start from right edge
+        opacity: 0      // Start invisible
     });
+
+    // Make cards visible now that GSAP has set their initial state
+    cards.forEach(card => {
+        card.classList.add('gsap-initialized');
+    });
+
+    // 2. Create the animation timeline
+    const featuresTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.features-section',
+            start: 'top top', // Start when features section hits the top
+            end: '+=200%',    // Reduced from 300% to tighten the animation
+            pin: true,        // Pin the section while animating
+            scrub: 1,         // Smooth scrubbing
+            anticipatePin: 1,  // Helps prevent gap at start
+            onEnter: () => console.log('Features section entered'),
+            onLeave: () => console.log('Features section left'),
+        }
+    });
+
+    // 3. Add animations for each card with proper timing
+    cards.forEach((card, i) => {
+        // Show card coming from right
+        featuresTl.to(card, {
+            xPercent: 0,
+            opacity: 1,
+            duration: 0.33,  // Each card takes 1/3 of the scroll
+            ease: "power1.inOut"
+        });
+
+        // If not the last card, move it out to the left
+        if (i < cards.length - 1) {
+            featuresTl.to(card, {
+                xPercent: -100,
+                opacity: 0,
+                duration: 0.33,
+                ease: "power1.inOut"
+            }, ">");  // Start immediately after previous animation
+        }
+    });
+
+    // 4. Add final state for clean transition to next section
+    featuresTl.to({}, { duration: 0.1 }); // Small buffer at the end
 }
+
+
 
 function initCrossPlatformAnimations() {
     const timeline = gsap.timeline({
@@ -128,7 +174,7 @@ function initCrossPlatformAnimations() {
             y: 50,
             opacity: 1,
             duration: 1.5,
-            delay: .5,
+            delay: 0.5,
             ease: "power3.out"
         }, "-=1") // Overlap with the previous animation by 1 second
         .to("#mobile-device", {
