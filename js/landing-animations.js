@@ -135,7 +135,7 @@ function initFeaturesAnimations() {
         }
     });
 
-    const centerPauseDuration = 0.5;
+    const centerPauseDuration = .1;
 
     cards.forEach((card, i) => {
         // Entry animation
