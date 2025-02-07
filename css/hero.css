@@ -91,8 +91,9 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Align items to the start */
     align-items: center;
+    padding-top: 40px; /* Add padding to the top */
 }
 
 #hero-title {
@@ -122,12 +123,13 @@
     font-family: 'Zen Dots';
     font-size: 2rem;
     color: #4a5568;
+    margin-top: 2rem; /* Add margin to the top */
     margin-bottom: 1rem;
     line-height: 1.5;
+    padding: 1rem;
     opacity: 0;
-
-
 }
+
 
 /* Scroll Indicator */
 .scroll-indicator {

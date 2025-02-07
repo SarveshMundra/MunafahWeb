@@ -115,7 +115,7 @@ function initFeaturesAnimations() {
         // Create repeating flip animation
         gsap.to(card.querySelector('.card-inner'), {
             rotationY: "+=180",
-            duration: 0.5,
+            duration: 0.3,
             ease: "power1.inOut",
             repeat: -1,
             repeatDelay: 1.8,
